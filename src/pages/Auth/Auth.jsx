@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./Auth.css";
 import Logo from "../../img/logo.svg";
 import { logIn, signUp } from "../../actions/AuthActions.js";
-import { useDispatch, useSelector } from "react-redux";
+import {UserRoute} from '../../Routes/UserRoutes'
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer,toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
+import axios from "axios";
 
 const Auth = () => {
   const initialState = {
@@ -13,12 +17,20 @@ const Auth = () => {
     password: "",
     confirmpass: "",
   };
+  const toastOptions = {
+    position: 'bottom-right',
+    autoClose: 5000,
+    pauseOnHover: true,
+    dragabble: true,
+    theme: 'dark'
+  }
   const loading = useSelector((state) => state.authReducer.loading);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [isSignUp, setIsSignUp] = useState(false);
-
+  const ok = useSelector((state) => state.authReducer.authData,shallowEqual);
   const [data, setData] = useState(initialState);
+  
 
   const [confirmPass, setConfirmPass] = useState(true);
 
@@ -29,6 +41,7 @@ const Auth = () => {
     setData(initialState);
     setConfirmPass(confirmPass);
   };
+  
 
   // handle Change in input
   const handleChange = (e) => {
@@ -36,19 +49,61 @@ const Auth = () => {
   };
 
   // Form Submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     setConfirmPass(true);
     e.preventDefault();
     if (isSignUp) {
-      data.password === data.confirmpass
-        ? dispatch(signUp(data, navigate))
-        : setConfirmPass(false);
+      handleValidation()?dispatch(signUp(data,navigate)):setConfirmPass(false)
+      // data.password === data.confirmpass
+      //   ? dispatch(signUp(data, navigate))
+      //   : setConfirmPass(false);
     } else {
-      dispatch(logIn(data, navigate));
+      const ok = await axios.post(UserRoute,{
+        username: data.username
+      })
+     
+      if(ok.data.verified){
+        toast.success("Welcome Back!",toastOptions)
+        setTimeout(() => {
+          dispatch(logIn(data,navigate))
+        }, 2000);
+      }else{
+        setTimeout(() => {
+          toast.error("Please Verify Your Email",toastOptions)
+        }, 500);
+        navigate("../verify", { replace: true });
+      }
     }
   };
 
+  const handleValidation = () =>{
+    const {username,password,confirmpass} = data
+    if(password!==confirmpass) {
+      toast.error("Passwords do not match",
+      toastOptions
+      )
+
+      return false;
+    }else if(username===""){
+      toast.error(
+        "Email is required",
+        toastOptions
+      )
+
+      return false;
+    }else if(!username.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
+      toast.error(
+        "Please enter a valid email address",
+        toastOptions
+      )
+      return false;
+    }
+
+    return true;
+  }
+
   return (
+    <>
     <div className="Auth">
       {/* left side */}
 
@@ -122,7 +177,7 @@ const Auth = () => {
             )}
           </div>
 
-          <span
+          {/* <span
             style={{
               color: "red",
               fontSize: "12px",
@@ -132,7 +187,7 @@ const Auth = () => {
             }}
           >
             *Confirm password is not same
-          </span>
+          </span> */}
           <div>
             <span
               style={{
@@ -160,6 +215,8 @@ const Auth = () => {
         </form>
       </div>
     </div>
+    <ToastContainer />
+    </>
   );
 };
 

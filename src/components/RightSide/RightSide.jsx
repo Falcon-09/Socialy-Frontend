@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./RightSide.css";
-import Home from "../../img/home.png";
 import Noti from "../../img/noti.png";
 import Comment from "../../img/comment.png";
 import { UilSetting } from "@iconscout/react-unicons";
@@ -18,7 +17,9 @@ const RightSide = () => {
         <Link to='../home'><FontAwesomeIcon className="ic1" icon={faHome} /></Link>
         <UilSetting />
         <img src={Noti} alt="" />
+        <Link to='../chat'>
         <img src={Comment} alt="" />
+        </Link>
       </div>
 
       <TrendCard />

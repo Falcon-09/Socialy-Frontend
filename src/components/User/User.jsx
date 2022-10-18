@@ -20,7 +20,7 @@ const User = ({ person }) => {
       <div>
         <img
           src={
-            publicFolder + person.profilePicture
+            publicFolder + person.profilePicture !== publicFolder
               ? publicFolder + person.profilePicture
               : publicFolder + "defaultProfile.png"
           }
@@ -29,7 +29,7 @@ const User = ({ person }) => {
         />
         <div className="name">
           <span>{person.firstname}</span>
-          <span>@{person.username}</span>
+          <span>@{person.firstname}{person.lastname}</span>
         </div>
       </div>
       <button

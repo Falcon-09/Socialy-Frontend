@@ -2,8 +2,6 @@ import React, {useState} from 'react'
 import './Post.css'
 import Comment from '../../img/comment.png'
 import Share from '../../img/share.png'
-import Heart from '../../img/like.png'
-import NotLike from '../../img/notlike.png'
 import { useSelector } from "react-redux";
 import { IconName } from "react-icons/fa";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
