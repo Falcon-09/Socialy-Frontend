@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { ToastContainer,toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'
 import axios from "axios";
+import { ResendOtpRoute } from "../../Routes/VerifyRoute";
 
 const Auth = () => {
   const initialState = {
@@ -68,6 +69,14 @@ const Auth = () => {
           dispatch(logIn(data,navigate))
         }, 2000);
       }else{
+        const getData = await axios.post(UserRoute,{
+          username: data.username
+        })
+        const user = getData.data
+        await axios.post(ResendOtpRoute,{
+          userId: user._id,
+          username: data.username
+        })
         setTimeout(() => {
           toast.error("Please Verify Your Email",toastOptions)
         }, 500);

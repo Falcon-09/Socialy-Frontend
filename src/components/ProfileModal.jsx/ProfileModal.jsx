@@ -57,6 +57,7 @@ function ProfileModal({ modalOpened, setModalOpened, data }) {
         console.log(err);
       }
     }
+    UserData.verified = true
     dispatch(updateUser(param.id, UserData));
     setModalOpened(false);
   };
