@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 const ProfileCard = ({location}) => {
   const { user } = useSelector((state) => state.authReducer.authData);
   const posts = useSelector((state)=>state.postReducer.posts)
-  const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
+  const serverPublic = "https://socialy-backend.herokuapp.com/images/";
   return (
     <div className="ProfileCard">
       <div className="ProfileImages">

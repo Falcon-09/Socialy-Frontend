@@ -17,7 +17,7 @@ const PostShare = () => {
   const desc = useRef();
   const { user } = useSelector((state) => state.authReducer.authData);
   const loading = useSelector((state) => state.postReducer.uploading);
-  const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
+  const serverPublic = "https://socialy-backend.herokuapp.com/images/";
 
   const onImageChange = (event) => {
     if (event.target.files && event.target.files[0]) {
