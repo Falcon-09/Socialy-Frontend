@@ -19,7 +19,7 @@ export const signUp = (formData, navigate) => async (dispatch) => {
     console.log(data);
     if (!data.verified) {
       dispatch({ type: "AUTH_SUCCESS", data: data });
-      navigate("../verify", { replace: true });
+      window.location.href = '/verify'
     } else {
       dispatch({ type: "AUTH_SUCCESS", data: data });
       navigate("../home", { replace: true });
