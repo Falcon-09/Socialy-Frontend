@@ -63,6 +63,7 @@ Full-Stack Social media website using MERN Stack and Socket.io
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/57940556/202518013-80ef7fa6-8a0c-4ebe-8794-4e389afe359e.png" alt="mockup" /></td>
+    <td><img src="https://user-images.githubusercontent.com/57940556/202518752-3784b919-cc53-4988-8db0-8404099657c1.png" alt="mockup" /></td>
   </tr>
 </table>
 
