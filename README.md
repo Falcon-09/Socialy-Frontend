@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Socialy
+Full-Stack Social media website using MERN Stack and Socket.io
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Visit Now](https://socialy.vercel.app/) 🚀
 
-## Available Scripts
+## 🖥️ Tech Stack
+**Frontend:**
 
-In the project directory, you can run:
+![reactjs](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)&nbsp;
+![react-router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)&nbsp;
+![redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)&nbsp;
+![tailwindcss](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)&nbsp;
+![mui](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)&nbsp;
 
-### `yarn start`
+**Backend:**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![nodejs](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)&nbsp;
+![expressjs](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)&nbsp;
+![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)&nbsp;
+![jwt](	https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)&nbsp;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Realtime Communication:**
 
-### `yarn test`
+![socketio](https://img.shields.io/badge/Socket.io-010101?&style=for-the-badge&logo=Socket.io&logoColor=white)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Deployed On:**
 
-### `yarn build`
+![heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)&nbsp;
+![vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Cloud Storage:** [Firebase](https://firebase.com/)
+**Mail Service:** [Nodemailer](https://nodemailer.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Features
+- Login/Signup User Account
+- Login using Email/Username
+- Email verification via Otp
+- Update Profile/Password User Account
+- Infinite Scroll Posts
+- Suggested Users
+- Follow/Unfollow Users
+- Like/Unlike Posts
+- Comment on Post
+- Save/Unsave Post
+- Share New Post
+- Delete Own Posts
+- Add New Chat
+- Message Users
+- Online User Status
+- See Followers/Following of Users
+- Post Liked by Users
+- Emoji Enabled
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Sneak Peek of Home Page 🙈 :
+![home](https://user-images.githubusercontent.com/57940556/202517813-ec448973-16f6-4138-8d76-e07277199609.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<table>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/57940556/202517673-db7678b0-b6d5-4421-bc04-2fa0e5df6213.png" alt="mockup" /></td>
+    <td><img src="https://user-images.githubusercontent.com/57940556/202517912-1a6b61c8-ad7a-485b-b2b7-3017c2f42889.png" alt="mockups" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/57940556/202518013-80ef7fa6-8a0c-4ebe-8794-4e389afe359e.png" alt="mockup" /></td>
+  </tr>
+</table>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<h2>📬 Contact</h2>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If you want to contact me, you can reach me through below handles.
 
-## Learn More
+[![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nipun-mitra-ab01b120b/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+© 2022 Nipun Mitra
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
