@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const API = axios.create({ baseURL: 'https://socialy-backend.herokuapp.com' });
+const API = axios.create({ baseURL: 'https://socialy-backend.onrender.com' });
 
 API.interceptors.request.use((req) => {
     if (localStorage.getItem('profile')) {
