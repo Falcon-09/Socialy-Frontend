@@ -1,4 +1,4 @@
-const base = "https://socialy-backend.herokuapp.com"
+const base = "https://socialy-backend.onrender.com"
 
 export const VerifyRoute = `${base}/verify`
 export const ResendOtpRoute = `${base}/verify/resend`
