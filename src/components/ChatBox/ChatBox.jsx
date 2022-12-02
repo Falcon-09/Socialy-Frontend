@@ -100,9 +100,9 @@ useEffect(()=> {
                   <img
                     src={
                       userData?.profilePicture
-                        ? process.env.REACT_APP_PUBLIC_FOLDER +
+                        ? "https://socialy-backend-production.up.railway.app/images/" +
                           userData.profilePicture
-                        : process.env.REACT_APP_PUBLIC_FOLDER +
+                        : "https://socialy-backend-production.up.railway.app/images/" +
                           "defaultProfile.png"
                     }
                     alt="Profile"
