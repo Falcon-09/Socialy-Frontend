@@ -1,3 +1,3 @@
-const base = "http://localhost:5000"
+const base = "https://socialy-backend.herokuapp.com"
 
 export const ChatRoute = `${base}/chat/`
