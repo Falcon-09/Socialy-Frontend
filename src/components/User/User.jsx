@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { followUser, unfollowUser } from "../../actions/UserAction";
 import { ChatRoute } from "../../Routes/ChatRoute";
 const User = ({ person }) => {
-  const publicFolder = process.env.REACT_APP_PUBLIC_FOLDER;
+  const publicFolder = "https://socialy-backend-production.up.railway.app/images/"
   const { user } = useSelector((state) => state.authReducer.authData);
   const dispatch = useDispatch()
   
