@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const API = axios.create({ baseURL: 'https://socialy-backend-production.up.railway.app' });
+const API = axios.create({ baseURL: 'https://mushy-ruby-colt.cyclic.app' });
 
 export const getMessages = (id) => API.get(`/message/${id}`);
 
