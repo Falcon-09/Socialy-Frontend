@@ -100,9 +100,9 @@ useEffect(()=> {
                   <img
                     src={
                       userData?.profilePicture
-                        ? "https://socialy-backend-production.up.railway.app/images/" +
+                        ? "https://mushy-ruby-colt.cyclic.app/images/" +
                           userData.profilePicture
-                        : "https://socialy-backend-production.up.railway.app/images/" +
+                        : "https://mushy-ruby-colt.cyclic.app/images/" +
                           "defaultProfile.png"
                     }
                     alt="Profile"
