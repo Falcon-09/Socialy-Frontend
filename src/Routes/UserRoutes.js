@@ -1,3 +1,3 @@
-const base = "https://socialy-backend-production.up.railway.app"
+const base = "https://mushy-ruby-colt.cyclic.app"
 
 export const UserRoute = `${base}/user/ver`
